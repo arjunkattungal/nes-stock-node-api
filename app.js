@@ -25,7 +25,12 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 
+const userRoute = require('./src/routes/user.route');
+const companyRoute = require('./src/routes/company.route');
 
+
+app.use('/api/user', userRoute);
+app.use('/api/company', companyRoute);
 
 const PORT = process.env.PORT || 5000;
 
